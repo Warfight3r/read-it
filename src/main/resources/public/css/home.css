@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Consola';
+    src: url('/fonts/CONSOLA.TTF') format('truetype');
+}
+
+.font-consolas {
+    font-family: "Consola";
+}
+
+.widebox {
+    width: 33%;
+}
+
+.vertical-align-text {
+    vertical-align: 4%;
+    /* Adjust the value as needed */
+
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.filler {
+    flex: 1;
+}
+
+.footer-top-shadow {
+    background-color: #fff;
+    /* Adjust as needed */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    /* Adjust shadow color and intensity */
+    z-index: 1000;
+    /* Ensure navbar stays on top of other content */
+}

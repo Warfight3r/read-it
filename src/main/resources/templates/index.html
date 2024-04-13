@@ -1,11 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <title>read-it</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dependencies/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
 </head>
-<body>
-    Hello World!
+
+<body class="text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0 font-consolas">read-it.</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Project Repo</a>
+                    <a class="nav-link" href="#">Login</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3">
+            <div><span id="vibrating-dot">.</span> <span class="display-6" id="oscillating-text"></span>
+            </div>
+            <p class="lead">Introducing <em><b>read-it</b></em> ! - your go-to one-page powerhouse for creating stunning
+                blogs
+                that pop! Get ready to unleash your creativity and captivate your audience like never before.</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Start Blogging!</a>
+            </p>
+        </main>
+
+        <div class="filler">
+
+        </div>
+
+        <footer class="mt-auto text-white-50">
+            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+                    href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+        </footer>
+    </div>
+
+    <script src="js/script-text-oscillate.js">
+    </script>
+    <script src="js/script-dot.js"></script>
+
 </body>
+
 </html>
