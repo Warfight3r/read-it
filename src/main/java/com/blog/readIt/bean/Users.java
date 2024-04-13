@@ -63,4 +63,9 @@ public class Users {
     public void setBlogs(List<String> blogs) {
         this.blogs = blogs;
     }
+    @Override
+    public String toString() {
+        return "User [name=" + name + ", pwd=" + pwd + "]";
+    }
+    
 }
