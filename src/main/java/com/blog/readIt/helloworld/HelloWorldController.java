@@ -15,6 +15,9 @@ public class HelloWorldController {
 	@GetMapping("/home")
 	public String home() {
 		return "home";
+		// The mapping /home defines which url can access this page
+		// the function home() is just for reference, it is the function that is called upon when accessing /home
+		// the return "home" will return an html file named home in the templates folder under src/main/resources
 	}
 
 }
