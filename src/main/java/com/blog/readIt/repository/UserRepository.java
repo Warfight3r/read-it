@@ -11,6 +11,8 @@ import com.blog.readIt.bean.Users;
 @Repository("userRepository")
 public interface UserRepository extends MongoRepository<Users, String>{
 	List<Users> findByName(String name);
+	List<Users> findByEmail(String email);
+	
 //	List<Users> findByQtyGreaterThan(int blogs);
 //	List<Users> findByQtyBetween(int qty, int qty2);
 	

@@ -6,9 +6,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+// BECAUSE THESE VARIABLES ARE ***PRIVATE***, ONLY THIS CLASS AND ITS GETTERS CAN ACCESS IT AND ****NO OTHER OBJECTS****
+
 @Document(collection = "users")
 public class Users {
-
     @Id
     private String id;
 

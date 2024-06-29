@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>User Data</title>
 </head>
 <body>
-    <h1>User Information</h1>
-    <p>Name: <span th:text="${user.name}"></span></p>
-    <p>Email: <span th:text="${user.email}"></span></p>
-    <!-- Add other user properties as needed -->
+    <form action="/user" method="get">
+        <label for="name">Enter user name:</label>
+        <input type="text" id="name" name="name">
+        <!-- Here, we are sending the input having a name as "name" to the API endpoint /user -->
+        <!-- /user will return this page regardless of whether we input this variable because we have put the required flag as false in @RequestParams -->
+        <button type="submit">Search</button>
+    </form>
+    
+    <!-- To prevent this div from trying to access data before it has been returned to this page via /user, we use th:if -->
+    <!-- th:if will check if the username object exists and only then will it allow this div to completely display -->
+    <!-- beforehand, we couldn't access the username and password using user.name because the variable name was private inside the UserRepository.java file -->
+	<!-- Now, we can access these info because we are using the getters on the backend in HelloWorldController.java -->
+    <div th:if="${username}">
+        <h2>User Details</h2>
+        <p>Name: <span th:text="${username}"></span></p>
+        <p>Email: <span th:text="${email}"></span></p>
+        <p>Password: <span th:text="${password}"></span></p>
+    </div>
+
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
 </body>
 </html>

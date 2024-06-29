@@ -1,4 +1,6 @@
 package com.blog.readIt;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -6,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.blog.readIt.bean.Users;
 import com.blog.readIt.repository.UserRepository;
 
 @EnableMongoRepositories(basePackages = { "com.blog.readIt.repository"})
@@ -25,7 +29,11 @@ public class ReadItApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		System.out.println("-------SHIVAM-----------"+ mongoTemplate.getCollectionNames());
 		
-		System.out.println(userRepository.findByName("Shivam Dube"));
+		System.out.println(userRepository.findByName("Shivam Dube").get(0).getUsername());
+		System.out.println(userRepository.findByEmail("johndoe@example.com"));
+		
+		List<Users> users = userRepository.findByName("Shivam Dube");
+		System.out.println(users.get(0).getUsername());
 		
 //		System.out.println(userRepository.findByQtyGreaterThan(20));
 //		
